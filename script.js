@@ -38,8 +38,8 @@ function renderBookList(bookList) {
     });
 
     elements[i].addEventListener('mouseleave', () => {
-      const element = document.getElementById('bookDetails');
-      element.remove();
+      const elements = document.getElementById('bookDetails');
+      elements && elements.remove();
     });
   }
 }
@@ -48,7 +48,7 @@ function renderBookItem(book){
 
   const elements = document.getElementById('bookDetails');
 
-  elements && element.remove();
+  elements && elements.remove();
   let html = BookDetails(book);
   root.insertAdjacentHTML('afterbegin', html);
   
